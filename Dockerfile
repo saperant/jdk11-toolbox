@@ -14,7 +14,12 @@ LABEL authoritative-source-url=ghcr.io \
       vcs-url="https://github.com/saperant/jdk11-toolbox/"
 
 RUN dnf -y update && \
-    dnf -y install java-11-openjdk-devel.x86_64 && \
-    dnf -y install maven && \
+    dnf -y install \
+        vim \
+        tmux \
+        ranger \
+        java-11-openjdk-devel.x86_64 \
+        maven \
+        ant && \
     dnf clean all
 
